@@ -1,0 +1,342 @@
+body {
+     background: #000000;
+     color: #000000;
+     font-family: Arsenal, sans-serif;
+     font-size: 14px;
+}
+/*::-webkit-scrollbar { width: 0;} /* убираем скроллинг*/
+#container {
+     width: 100%;
+     height: 100%;
+}
+
+#header {
+     position: absolute; /* тут */
+     z-index: 2;
+     width: 99%;
+    /* height: 80px;*/
+}
+.logo {
+     position: absolute; 
+     top: 0px; /*?*/
+     left: 100px; 
+     width: 97px; 
+     height: 46px; 
+     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 38px/46px var(--unnamed-font-family-roboto); 
+     letter-spacing: var(--unnamed-character-spacing-0); 
+     color: var(--unnamed-color-ffffff); 
+     text-align: left; 
+     font: normal normal normal 38px/46px Roboto; 
+     letter-spacing: 0px; 
+     color: #FFFFFF; 
+     opacity: 1;
+}
+
+.b {
+     position: absolute;
+     top: 31px;
+left: 566px;
+width: 522px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ffffff);
+text-align: left;
+font: normal normal normal 16px/19px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+word-spacing: 50px;
+}
+
+.bbb {
+     position: absolute;
+top: 15px;
+left: 1080px;
+width: 178px;
+height: 51px;
+border: 1px solid var(--unnamed-color-ad27ff);
+border: 1px solid #AD27FF;
+opacity: 1;
+}
+.bb {
+     position: absolute;
+    color: #AD27FF; 
+    top: 31px;
+left: 1118px;
+width: 118px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ad27ff);
+text-align: left;
+font: normal normal normal 16px/19px Roboto;
+letter-spacing: 0px;
+opacity: 1;
+}
+
+
+.bbbbb {
+     position: absolute;
+     top: 15px;
+left: 1314px;
+width: 105px;
+height: 51px;
+border: 1px solid var(--unnamed-color-ffffff);
+background: transparent url('images/Прямоугольник 2.svg') 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF;
+opacity: 1;
+}
+.bbbb {
+     position: absolute;
+top: 31px;
+left: 1346px;
+width: 45px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ffffff);
+text-align: left;
+font: normal normal normal 16px/19px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+
+div.comein {
+     width:88.25%;
+     position:absolute;
+     z-index:99999;
+}
+
+#content {
+     /* background: #DCDCDC; */
+     position: relative;
+     top: 80px; /* тут */ 
+     float: right;
+     width: 100%;
+     height: 768px;
+} 
+.Haudi {
+     position: absolute; 
+     top: 190px;
+     left: 100px;
+     width: 590px;
+     height: 77px;
+     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-64)/var(--unnamed-line-spacing-62) var(--unnamed-font-family-arsenal);
+     letter-spacing: var(--unnamed-character-spacing-0);
+     text-align: left;
+     font: normal normal normal 64px/62px Arsenal;
+     letter-spacing: 0px;
+     color: #F7F6FB;
+     opacity: 1;
+}
+.KWORD {
+     position: absolute;
+     top: 334px;
+left: 100px;
+width: 126px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-62) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+text-align: left;
+font: normal normal medium 16px/62px Roboto;
+letter-spacing: 0px;
+color: #818181;
+opacity: 1;
+} 
+.white1 {
+     position: absolute;
+     top: 374px;
+left: 100px;
+width: 400px;
+height: 51px;
+opacity: 1
+}
+
+.KATEGORIA {
+     position: absolute;
+     top: 334px;
+left: 530px;
+width: 78px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-62) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+text-align: left;
+font: normal normal medium 16px/62px Roboto;
+letter-spacing: 0px;
+color: #818181;
+opacity: 1;
+}
+.white2 {
+     position: absolute;
+     top: 374px;
+left: 530px;
+width: 260px;
+height: 51px;
+background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+border: 1px solid var(--unnamed-color-707070);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+opacity: 1;
+}
+.strelka {
+     position: absolute;
+     top: 393px;
+left: 751px;
+width: 23px;
+height: 13px;
+/* background-image: url(images/стрелка.png); */
+background: #000000 0% 0% no-repeat padding-box; /* кнопка стрелки вниз*/
+opacity: 1;
+}
+.primer2 {
+     position: absolute;
+     top: 365px;
+left: 546px;
+width: 27px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-62) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+text-align: left;
+font: normal normal normal 16px/62px Roboto;
+letter-spacing: 0px;
+color: #2B2B2B;
+opacity: 1;
+}
+.Hayti {
+     position: absolute;
+     top: 390px;
+left: 836px;
+width: 46px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-62) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ffffff);
+text-align: left;
+font: normal normal medium 16px/62px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+.white3 {
+     position: absolute;
+     top: 374px;
+left: 806px;
+width: 106px;
+height: 51px;
+background: var(--unnamed-color-5729ff) 0% 0% no-repeat padding-box;
+background: #5729FF 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+#KG {
+     /* background: #00BFFF; */
+     height: 1593px;
+}
+.konkyrsGrant {
+     position: relative;  
+     top: 150px; 
+     left: 100px; 
+     width: 402px; 
+     height: 43px; 
+     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-54) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0-72); 
+     text-align: left; 
+     font: normal normal normal 36px/54px Roboto; 
+     letter-spacing: 0.72px; 
+     color: #F7F6FB; 
+     text-transform: uppercase; 
+     opacity: 1
+}
+.posmot {
+     position: relative;
+     top: 166px;
+left: 1238px;
+width: 138px;
+height: 22px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-18) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ad27ff);
+text-align: left;
+font: normal normal bold 18px/18px Roboto;
+letter-spacing: 0px;
+color: #AD27FF;
+opacity: 1;
+}
+.strelka2 {
+     position: relative;
+     top: 795px;
+left: 1396px;
+width: 45px;
+height: 16px;
+background-image: url(images/strelka2.svg);
+/* background: var(--unnamed-color-ad27ff) 0% 0% no-repeat padding-box;
+background: #AD27FF 0% 0% no-repeat padding-box; */
+opacity: 1;
+}
+
+#proekts {
+     width: 100%;
+     height: 791px; 
+}
+.proekts {
+     position: relative;
+     top: 150px;
+     left: 100px;
+     width: 174px;
+     height: 43px;
+     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-54) var(--unnamed-font-family-roboto);
+     letter-spacing: var(--unnamed-character-spacing-0-72);
+     text-align: left;
+     font: normal normal normal 36px/54px Roboto;
+     letter-spacing: 0.72px;
+     color: #F7F6FB;
+     text-transform: uppercase;
+     opacity: 1;
+}
+.posmot2 {
+     position: relative;
+     top: 93px;
+left: 1238px;
+width: 138px;
+height: 22px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-18) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ad27ff);
+text-align: left;
+font: normal normal bold 18px/18px Roboto;
+letter-spacing: 0px;
+color: #AD27FF;
+opacity: 1;
+}
+.strelka3 {
+     position: relative;
+     top: 56px;
+left: 1396px;
+width: 45px;
+height: 16px;
+background-image: url(images/strelka2.svg);
+/* background: var(--unnamed-color-ad27ff) 0% 0% no-repeat padding-box;
+background: #AD27FF 0% 0% no-repeat padding-box; */
+opacity: 1;
+}
+
+#footer {
+	width: 99%;
+	height: 276px;
+}
+.PCMF {
+margin-left: 300px;
+word-spacing: 150px;
+
+width: 850px;
+height: 19px;
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-19) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-ffffff);
+text-align: left;
+font: normal normal normal 16px/19px Roboto;
+letter-spacing: 0px;
+color: #F7F6FB;
+opacity: 1;
+}
