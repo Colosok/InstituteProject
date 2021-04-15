@@ -8,3 +8,7 @@ from django.views import generic
 
 class IndexView(generic.TemplateView):
     template_name = 'mainWindow/index.html'
+
+
+class ProjectsView(generic.TemplateView):
+    template_name = 'mainWindow/proekt.html'
