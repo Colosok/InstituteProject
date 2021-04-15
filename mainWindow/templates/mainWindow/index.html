@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
     <title>Сервис по поиску партнеров для выполнения междисциплинарных научных проектов</title>
-	<link rel="stylesheet" type="text/css" href="website.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainWindow/website.css' %}">
 	<style>
 		body {
 			background: #000000;
-		    background-image: url(images/bg.jpg);
-			background-size: 100%; /* было 1920рх 848рх*/
+		  /*  background-image: url("images/bg.jpg");*/
+			/*background-size: 100%; /* было 1920рх 848рх*/
 			background-repeat: no-repeat;
 		}
 	</style>
@@ -21,6 +22,7 @@
 	 
 </head>
 <body>
+<img src="{% static 'mainWindow/images/bg.jpg' %}" style="position:absolute; width:99%">
 
 	<div id="container">
 	
@@ -48,7 +50,7 @@
 							<p style="position: relative; top: 64px; margin-left: 562px; width: 400px; height: 51px; background: #3E14D9 0% 0% no-repeat padding-box; border: 1px solid #AFAFAF; opacity: 1;"></p>
 							<p style="position: relative; top: 14px; margin-left: 575px; width: 364px; height: 19px; font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); color: var(--unnamed-color-ffffff); text-align: center; font: normal normal medium 16px/24px Roboto; letter-spacing: 0px; opacity: 1;"><a href="regist" style="color: #FFFFFF;">Войти</a></p>
 							<p style="position: relative; top: 54px; margin-left: 741px; width: 28px; height: 19px; font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: center; font: normal normal medium 16px/24px Roboto; letter-spacing: 0px; color: #000000; opacity: 1;">или</p> 
-							<p style="position: relative; top: 64px;margin-left: 655px;  opacity: 1;"><a href="https://vk.com/"><img src="images/vk.svg" alt="vk" style="margin-right: 15px;"></a><img src="images/mail_ru.svg" alt="m"  style="margin-right: 15px;"><img src="images/facebook.svg" alt="f"  style="margin-right: 15px;"><img src="images/linkedin.svg" alt="l" ><img src="images/google.svg" alt="G" style="margin-left: 15px;"></p> <br>
+							<p style="position: relative; top: 64px;margin-left: 655px;  opacity: 1;"><a href="https://vk.com/"><img src="{% static 'mainWindow/images/vk.svg' %}" alt="vk" style="margin-right: 15px;"></a><img src="{% static 'mainWindow/images/mail_ru.svg' %}" alt="m"  style="margin-right: 15px;"><img src="{% static 'mainWindow/images/facebook.svg' %}" alt="f"  style="margin-right: 15px;"><img src="{% static 'mainWindow/images/linkedin.svg' %}" alt="l" ><img src="{% static 'mainWindow/images/google.svg' %}" alt="G" style="margin-left: 15px;"></p> <br>
 							<p style="position: relative; top: 64px;margin-left: 562px;width: 27px;height: 27px;background: 0% 0% no-repeat padding-box;opacity: 1; border: 2px solid #000000;;"></p>
 							<p style="position: absolute; top: 564px;margin-left: 605px; width: 323px; height: 62px; font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0);text-align: left; font: normal normal normal 14px/20px Roboto; letter-spacing: 0px; opacity: 1;">Создавая учетную запись вы соглашаетесь с <a>Условиями использования</a> и <a>Политикой конфиденциальности</a></p> <br>
 							
@@ -59,7 +61,15 @@
 
 		<div id="content">
 			<h2 class="Haudi">Найди проект сейчас</h2>
-			<h2 class="KWORD">Ключевое слово</h2> <h2 class="KATEGORIA">Категория</h2><p class="white1" ><input type="text" size="56" placeholder="Например, Роботы" style="height: 48px; padding-left: 10px;"></p><p class="white2"></p><p class="strelka"></p><p class="primer2">Все</p><p class="white3"></p><p class="Hayti">Найти</p> <!--тут выпадающий список надо) -->
+			<h2 class="KWORD">Ключевое слово</h2> <h2 class="KATEGORIA">Категория</h2><p class="white1" ><input type="text" size="56" placeholder="Например, Роботы" style="height: 48px; padding-left: 10px;"></p><select size="1" class="white2">
+					<option value="Все">Все</option>
+					<option value="Математика">Математика</option>
+					<option value="Механика">Механика</option>
+					<option value="Информатика">Информатика</option>
+					<option value="Физика">Физика</option>
+					<option value="Самолетостроение">Самолетостроение</option>
+				</select>
+			<p class="white3"></p><p class="Hayti">Найти</p> <!--тут выпадающий список надо) -->
 		</div>
 		 
 		<div id="KG">
