@@ -28,16 +28,28 @@
 
 	<div id="container">
 
+		<style>
+			.hello-msg {
+				font-size: 18px;
+				color: #fff;
+				margin-right: 20px;
+			}
+		</style>
 
 		<div id="header">
 			<h2 class="logo">LOGO</h2>
 			<div class="b"><a href="/projects/" style="color: #FFFFFF;">Проекты</a> <a href="cpecialist"
 					style="color: #FFFFFF;">Специалисты</a> <a href="meropriatia"
 					style="color: #FFFFFF;">Мероприятия</a> <a href="forym" style="color: #FFFFFF;">Форум</a></div>
+			{% if user.is_authenticated %}
 			<div class="bbb"></div>
 			<div class="bb"><a href="startproekt" style="color: #AD27FF;">Создать проект</a></div>
+			<span class="hello-msg">Hello, {{request.user}}</span>
+			<a class="hello-msg" href="logout">Logout</a>
+			{% else %}
 			<div class="bbbbb"></div>
 			<div class="bbbb"><a onclick="show('block')" href="#form" style="color: #FFFFFF;">Войти</a></div>
+			{% endif %}
 		</div>
 
 
@@ -47,8 +59,9 @@
 		<!--затемнение при регистрации-->
 
 		<div class="comein">
-			<form id="form" style="display: none;">
+			<form method="post" id="form" style="display: none;">
 				<!--style="display: none;"-->
+				{% csrf_token %}
 				<p
 					style="position: absolute; top: 52px;margin-left: 530px;width: 460px;height: 634px;background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;border: 1px solid var(--unnamed-color-707070);background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #707070;opacity: 1;">
 				</p>
@@ -58,13 +71,13 @@
 				<p
 					style="position: relative; top: 64px; margin-left: 562px; width: 396px; height: 19px; font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: left; font: normal normal bold 16px/24px Roboto; letter-spacing: 0px; color: #2B2B2B; opacity: 1;">
 					Электронная почта или телефон</p>
-				<input type="text" name="emailphone" class="input"
+				<input type="text" name="email" class="input"
 					style="position: relative; top: 64px; margin-left: 562px; width: 396px; height: 54px; background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box; background: #FFFFFF 0% 0% no-repeat padding-box; border: 1px solid #AFAFAF;opacity: 1;">
 				<br>
 				<p
 					style="position: relative; top:64px; margin-left: 562px; width: 396px; height: 19px; font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: left; font: normal normal bold 16px/24px Roboto; letter-spacing: 0px; color: #2B2B2B; opacity: 1;">
 					Пароль</p>
-				<input type="text" placeholder="Минимум 6 символов" name="name2" class="input"
+				<input type="password" placeholder="Минимум 8 символов" name="password" class="input"
 					style="position: relative; top: 64px; margin-left: 562px; width: 396px; height: 54px; background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box; background: #FFFFFF 0% 0% no-repeat padding-box; border: 1px solid #AFAFAF; opacity: 1;">
 				<br>
 				<p
@@ -72,7 +85,7 @@
 				</p>
 				<p
 					style="position: relative; top: 14px; margin-left: 575px; width: 364px; height: 19px; font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); color: var(--unnamed-color-ffffff); text-align: center; font: normal normal medium 16px/24px Roboto; letter-spacing: 0px; opacity: 1;">
-					<a href="regist" style="color: #FFFFFF;">Войти</a>
+					<input type="submit" value="Войти">
 				</p>
 				<p
 					style="position: relative; top: 54px; margin-left: 741px; width: 28px; height: 19px; font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: center; font: normal normal medium 16px/24px Roboto; letter-spacing: 0px; color: #000000; opacity: 1;">
@@ -93,10 +106,14 @@
 
 				<p
 					style="position: absolute; top: 641px;margin-left: 674px;width: 45px;height: 19px;font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-roboto);letter-spacing: var(--unnamed-character-spacing-0);text-align: left;font: normal normal normal 16px/20px Roboto;letter-spacing: 0px;color: #3E14D9;opacity: 1;">
-					<a href="vxod">Зарегистрироваться</a>
+					<a href="register">Зарегистрироваться</a>
 				</p>
 			</form>
 		</div>
+
+		{% for message in messages %}
+		<p id="messages">{{message}}</p>
+		{% endfor %}
 
 
 		<div id="content">

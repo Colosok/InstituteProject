@@ -1,0 +1,21 @@
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>
+        {{form.email.label}}
+        {{form.email}}
+    </p>
+    <p>
+        {{form.date_of_birth.label}}
+        {{form.date_of_birth}}
+    </p>
+    <p>
+        {{form.password1.label}}
+        {{form.password1}}
+    </p>
+    <p>
+        {{form.password2.label}}
+        {{form.password2}}
+    </p>
+    <input type="submit" value="Создать">
+    {{form.errors}}
+</form>
