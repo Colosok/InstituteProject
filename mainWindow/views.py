@@ -8,6 +8,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 # from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import CreateUserForm
+from django.contrib.auth.decorators import login_required
 
 
 def IndexView(request):
@@ -52,3 +53,26 @@ def logoutUser(request):
 def ProjectsView(request):
     context = {}
     return render(request, 'mainWindow/register.html', context)
+
+
+def IndexView(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = authenticate(request, username=email, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('/privateoffice')
+        else:
+            messages.info(request, 'Email OR password is incorrect')
+
+    context = {}
+    return render(request, 'mainWindow/index.html', context)
+
+
+@login_required(login_url='/')
+def PrivateOffice(request):
+
+    context = {}
+    return render(request, 'mainWindow/lk.html', context)

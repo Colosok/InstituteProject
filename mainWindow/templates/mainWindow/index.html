@@ -38,6 +38,7 @@
 
 		<div id="header">
 			<h2 class="logo">LOGO</h2>
+
 			<div class="b"><a href="/projects/" style="color: #FFFFFF;">Проекты</a> <a href="cpecialist"
 					style="color: #FFFFFF;">Специалисты</a> <a href="meropriatia"
 					style="color: #FFFFFF;">Мероприятия</a> <a href="forym" style="color: #FFFFFF;">Форум</a></div>
@@ -95,25 +96,18 @@
 						src="{% static 'mainWindow/images/mail_ru.svg' %}" alt="m" style="margin-right: 15px;"><img
 						src="{% static 'mainWindow/images/facebook.svg' %}" alt="f" style="margin-right: 15px;"><img
 						src="{% static 'mainWindow/images/linkedin.svg' %}" alt="l"><img
-						src="{% static 'mainWindow/images/google.svg' %}" alt="G" style="margin-left: 15px;"></p> <br>
-				<p
-					style="position: relative; top: 64px;margin-left: 562px;width: 27px;height: 27px;background: 0% 0% no-repeat padding-box;opacity: 1; border: 2px solid #000000;;">
-				</p>
-				<p
-					style="position: absolute; top: 564px;margin-left: 605px; width: 323px; height: 62px; font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0);text-align: left; font: normal normal normal 14px/20px Roboto; letter-spacing: 0px; opacity: 1;">
-					Создавая учетную запись вы соглашаетесь с <a>Условиями использования</a> и <a>Политикой
-						конфиденциальности</a></p> <br>
+						src="{% static 'mainWindow/images/google.svg' %}" alt="G" style="margin-left: 15px;"></p>
 
+				{% for message in messages %}
+				<p style="position: relative; top: 54px; margin-left: 741px; width: 28px; height: 19px; font: var(--unnamed-font-style-normal) normal medium var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: center; font: normal normal medium 16px/24px Roboto; letter-spacing: 0px; color: #000000; opacity: 1;"
+					id="messages">{{message}}</p>
+				{% endfor %}
 				<p
 					style="position: absolute; top: 641px;margin-left: 674px;width: 45px;height: 19px;font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-roboto);letter-spacing: var(--unnamed-character-spacing-0);text-align: left;font: normal normal normal 16px/20px Roboto;letter-spacing: 0px;color: #3E14D9;opacity: 1;">
 					<a href="register">Зарегистрироваться</a>
 				</p>
 			</form>
 		</div>
-
-		{% for message in messages %}
-		<p id="messages">{{message}}</p>
-		{% endfor %}
 
 
 		<div id="content">
@@ -164,6 +158,12 @@
 			document.getElementById('gray').style.display = state;
 		}
 	</script>
+
+	{% if messages %}
+	<script>
+		show('block');
+	</script>
+	{% endif %}
 </body>
 
 </html>
